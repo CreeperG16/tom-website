@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const webhookUrl =
-    "https://discord.com/api/webhooks/1058783560540098651/aiobWWPgzahkCPmkM36E-VTl7d3-kL8vQA4vcXt3NFNj7PNVsOHUVw8lzfaOFKwygjnq";
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // console.log(req.body);
 
-    fetch(webhookUrl, {
+    if (!process.env.WEBHOOK_URL) return res.status(500);
+
+    fetch(process.env.WEBHOOK_URL, {
         method: "POST",
         body: JSON.stringify({
             content: JSON.stringify(req.body),
