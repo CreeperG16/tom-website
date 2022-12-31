@@ -23,7 +23,7 @@ export default function Home() {
                     right: 0,
                 }}
             >
-                <h1 style={{ fontFamily: "sans-serif" }}>hello</h1>
+                <h1 style={{ fontFamily: "sans-serif" }}>hellooo</h1>
             </main>
         </>
     );
