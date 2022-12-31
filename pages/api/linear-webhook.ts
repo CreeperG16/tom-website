@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            content: JSON.stringify(req.body),
+            content: "```json\n" + JSON.stringify(req.body, null, 4) + "```",
         }),
     });
 
