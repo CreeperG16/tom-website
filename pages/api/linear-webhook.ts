@@ -15,7 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         body: JSON.stringify({
             content: JSON.stringify(req.body),
         }),
-    }).then(() => res.status(200));
+    });
 
-    return;
+    return res.status(200);
 }
