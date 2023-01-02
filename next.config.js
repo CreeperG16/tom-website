@@ -1,10 +1,5 @@
 const { execSync } = require("child_process");
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-};
-
 const commits = execSync("git log")
     .toString()
     .split("Author:")
@@ -23,8 +18,12 @@ const commits = execSync("git log")
         author: { name: x[1]?.split(" ")[0], email: x[1]?.split(" ")[1]?.replace?.(/<|>/g, "") },
     }));
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    reactStrictMode: true,
     env: {
         NEXT_PUBLIC_GIT_COMMITS: JSON.stringify(commits),
     },
 };
+
+module.exports = nextConfig;
