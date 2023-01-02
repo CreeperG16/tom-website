@@ -6,8 +6,8 @@ export default function Home() {
     const [commitInfo, setCommitInfo] = useState({ id: "", message: "", date: "", author: { name: "", email: "" } });
 
     useEffect(() => {
-        // const commits = await fetch("https://tom-website.vercel.app/api/gitinfo").then((x) => x.json());
-        fetch("http://localhost:3000/api/gitinfo")
+        fetch("https://tom-website.vercel.app/api/gitinfo")
+            // fetch("http://localhost:3000/api/gitinfo")
             .then((x) => x.json())
             .then((x) => setCommitInfo(x[0]));
         console.log(1);
