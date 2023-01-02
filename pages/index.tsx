@@ -1,17 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-    const [commitInfo, setCommitInfo] = useState({ id: "", message: "", date: "", author: { name: "", email: "" } });
-
-    useEffect(() => {
-        fetch("https://tom-website.vercel.app/api/gitinfo")
-            // fetch("http://localhost:3000/api/gitinfo")
-            .then((x) => x.json())
-            .then((x) => setCommitInfo(x[0]));
-        console.log(1);
-    }, []);
+    const commitInfo = JSON.parse(process.env.NEXT_PUBLIC_GIT_COMMITS ?? "[]")[0];
 
     return (
         <>
@@ -48,13 +39,13 @@ export default function Home() {
                     <p style={{ fontFamily: "sans-serif", opacity: 0.5 }}>
                         Commit{" "}
                         <a
-                            href={"https://github.com/CreeperG16/tom-website/commit/" + commitInfo.id}
-                            title={commitInfo.date}
+                            href={"https://github.com/CreeperG16/tom-website/commit/" + commitInfo?.id}
+                            title={commitInfo?.date}
                             target="_blank"
                         >
-                            {commitInfo.id}
+                            {commitInfo?.id}
                         </a>{" "}
-                        <span style={{ fontStyle: "italic" }}>{commitInfo.message}</span> - {commitInfo.author.name}
+                        <span style={{ fontStyle: "italic" }}>{commitInfo?.message}</span> - {commitInfo?.author?.name}
                     </p>
                 </footer>
             </main>
