@@ -1,7 +1,12 @@
 :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-rgb: 35, 39, 42;
+
+    --black-0: #23272a;
+    --black-20: #1c1f22;
+    --black-40: #151719;
+    --black-60: #0e1011;
+    --black-80: #070808;
 }
 
 * {
@@ -19,7 +24,7 @@ body {
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    background: var(--black-40);
 }
 
 a {
@@ -29,4 +34,47 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Styles */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 15px;
+    background-color: var(--black-60);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 15px;
+}
+
+.hello-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: #03c59ade;
+    box-shadow: 5px 5px 15px #ffffff55;
 }
