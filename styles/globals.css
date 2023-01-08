@@ -7,6 +7,11 @@
     --black-40: #151719;
     --black-60: #0e1011;
     --black-80: #070808;
+
+    --green-0: #03c59a;
+    --green-20: #029e7b;
+    --green-40: #02765c;
+    --green-60: #014f3e;
 }
 
 * {
@@ -66,6 +71,8 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .hello {
@@ -75,6 +82,90 @@ a:hover {
     width: 200px;
     height: 100px;
     border-radius: 15px;
-    background-color: #03c59ade;
+    background-color: var(--green-0);
     box-shadow: 5px 5px 15px #ffffff55;
+}
+
+.login-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-box {
+    position: relative;
+    width: 25%;
+    height: 50%;
+    background-color: var(--black-20);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.login-box h1 {
+    position: absolute;
+    top: 15px;
+    margin-top: 0px;
+    margin-bottom: auto;
+}
+
+.login-box .input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.login-box .input-container input {
+    border: 0;
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 2px solid #ffffff55;
+    outline: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.login-box .input-container label {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    top: 0px;
+    left: 0px;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: all 150ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.login-box .input-container input:focus {
+    border-bottom: 2px solid var(--green-20);
+}
+
+.login-box .input-container input:focus ~ label,
+.login-box .input-container input:valid ~ label {
+    top: -12px;
+    font-size: 12px;
+}
+
+.login-button {
+    position: absolute;
+    bottom: 20px;
+    border: 0;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--green-20);
+    transition: background-color 75ms;
+    color: "#ffffff";
+}
+
+.login-button:active {
+    background-color: var(--green-0);
 }
