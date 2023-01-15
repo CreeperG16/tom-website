@@ -5,6 +5,14 @@ export default function Nyelvtan() {
         <>
             <Head>
                 <title>Erdőirtás</title>
+                <meta content="Erdőirtási kampány - Nyelvtan csoportmunka" property="og:title" />
+                <meta
+                    content="Figyelemfelhívó kampány az erdőirtásról - nyelvtan csoportmunka\nPapp Tamás, Tóth Levente, Kenderes Nóra, Csizmazia Sára, Kovács Jázmin, Barath Bence"
+                    property="og:description"
+                />
+                <meta content="https://tom-website.vercel.app/nyelvtan" property="og:url" />
+                {/* <meta content="https://embed.com/embedimage.png" property="og:image" /> */}
+                <meta content="#43B581" data-react-helmet="true" name="theme-color" />
             </Head>
             <div id="mobile">
                 <h1>Sajnos az oldal nem működik kis képernyőméreten.</h1>
