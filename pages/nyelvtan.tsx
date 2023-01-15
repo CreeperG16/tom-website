@@ -7,7 +7,7 @@ export default function Login() {
                     <h1 id="title">
                         42 000 000<span id="trees"> fát</span>
                     </h1>
-                    <h1 id="subtitle">vágnak ki világszerte</h1>
+                    <h1 id="subtitle">vágnak ki világszerte.</h1>
                 </div>
             </div>
             <div id="two">

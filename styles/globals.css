@@ -193,7 +193,7 @@ a:hover {
 }
 
 #nyelvtan #one {
-    width: 70%;
+    width: fit-content;
     height: 100vh;
 }
 
