@@ -175,15 +175,38 @@ a:hover {
     width: 100vw;
     height: 200vh;
     background-repeat: no-repeat;
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#nyelvtan #one-shadow {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #23272a61;
+    box-shadow: 0 -30px 20px 0 #23272a61;
+}
+
 #nyelvtan #one {
+    width: 70%;
     height: 100vh;
 }
 
+#nyelvtan #one #pretitle {
+    font-size: 4em;
+}
 #nyelvtan #one #title {
-    font-size: 20em;
+    font-size: 14em;
+}
+#nyelvtan #one #title #trees {
+    font-size: 0.5em;
+}
+#nyelvtan #one #subtitle {
+    font-size: 4em;
+    text-align: right;
 }

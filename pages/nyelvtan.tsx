@@ -1,9 +1,14 @@
 export default function Login() {
     return (
         <div id="nyelvtan">
-            <div id="one">
-                <h1>itt majd lesz egy kampány</h1>
-                <h1 id="title">Hello</h1>
+            <div id="one-shadow">
+                <div id="one">
+                    <h1 id="pretitle">Naponta</h1>
+                    <h1 id="title">
+                        42 000 000<span id="trees"> fát</span>
+                    </h1>
+                    <h1 id="subtitle">vágnak ki világszerte</h1>
+                </div>
             </div>
         </div>
     );
