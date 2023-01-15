@@ -177,16 +177,18 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
 #nyelvtan #one-shadow {
+    position: relative;
+    top: 50vh;
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     background-color: #23272a61;
     box-shadow: 0 -30px 20px 0 #23272a61;
@@ -212,7 +214,35 @@ a:hover {
 }
 
 #nyelvtan #two {
-    position: absolute;
-    top: 120vh;
-    box-shadow: 0 20px 0 0 #070808;
+    box-shadow: 0 -20px 20px 0 #014f3e;
+}
+
+#nyelvtan #two,
+#nyelvtan #three,
+#nyelvtan #four,
+#nyelvtan #five,
+#nyelvtan #six,
+#nyelvtan #seven {
+    background-color: #014f3e;
+    z-index: 2;
+    display: flex;
+    padding-bottom: 200px;
+}
+
+#nyelvtan div .section-title {
+    font-size: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+}
+
+#nyelvtan div .info {
+    font-size: 1.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85vw;
 }
