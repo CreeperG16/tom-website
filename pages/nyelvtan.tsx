@@ -7,7 +7,7 @@ export default function Nyelvtan() {
                 <title>Erdőirtás</title>
                 <meta content="Erdőirtási kampány - Nyelvtan csoportmunka" property="og:title" />
                 <meta
-                    content="Figyelemfelhívó kampány az erdőirtásról - nyelvtan csoportmunka\nPapp Tamás, Tóth Levente, Kenderes Nóra, Csizmazia Sára, Kovács Jázmin, Barath Bence"
+                    content="Figyelemfelhívó kampány az erdőirtásról - nyelvtan csoportmunka. Készítette: Papp Tamás, Tóth Levente, Kenderes Nóra, Csizmazia Sára, Kovács Jázmin, Barath Bence"
                     property="og:description"
                 />
                 <meta content="https://tom-website.vercel.app/nyelvtan" property="og:url" />
