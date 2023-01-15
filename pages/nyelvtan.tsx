@@ -10,6 +10,10 @@ export default function Login() {
                     <h1 id="subtitle">vágnak ki világszerte</h1>
                 </div>
             </div>
+            <div id="two">
+                <h1 className="info">a</h1>
+                <h1 className="info">a</h1>
+            </div>
         </div>
     );
 }

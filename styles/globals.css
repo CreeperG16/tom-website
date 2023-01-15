@@ -182,7 +182,7 @@ a:hover {
 }
 
 #nyelvtan #one-shadow {
-    height: 50vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -207,6 +207,12 @@ a:hover {
     font-size: 0.5em;
 }
 #nyelvtan #one #subtitle {
-    font-size: 4em;
+    font-size: 3em;
     text-align: right;
+}
+
+#nyelvtan #two {
+    position: absolute;
+    top: 120vh;
+    box-shadow: 0 20px 0 0 #070808;
 }
