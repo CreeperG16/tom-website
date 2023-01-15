@@ -265,3 +265,21 @@ a:hover {
     width: 40vw;
     padding-right: 20px;
 }
+
+#mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #mobile {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: #02765c;
+        z-index: 5;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
