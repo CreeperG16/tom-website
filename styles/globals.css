@@ -190,8 +190,8 @@ a:hover {
     justify-content: center;
     flex-direction: column;
 
-    background-color: #23272a61;
-    box-shadow: 0 -30px 20px 0 #23272a61;
+    background-color: #23272a81;
+    box-shadow: 0 -30px 20px 0 #23272a81;
 }
 
 #nyelvtan #one {
@@ -215,6 +215,9 @@ a:hover {
 
 #nyelvtan #two {
     box-shadow: 0 -20px 20px 0 #014f3e;
+    position: relative;
+    top: 40px;
+    padding-top: 20px;
 }
 
 #nyelvtan #two,
@@ -226,6 +229,8 @@ a:hover {
     background-color: #014f3e;
     z-index: 2;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 200px;
 }
 
@@ -235,14 +240,28 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40vw;
+    text-align: center;
 }
 
 #nyelvtan div .info {
     font-size: 1.5em;
 
+    height: 200px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 85vw;
+    width: 70vw;
+    text-align: center;
+}
+
+#mo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mo-content h1.info {
+    text-align: right;
+    width: 40vw;
+    padding-right: 20px;
 }
