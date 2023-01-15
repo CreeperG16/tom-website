@@ -169,3 +169,21 @@ a:hover {
 .login-button:active {
     background-color: var(--green-0);
 }
+
+#nyelvtan {
+    background-image: url("https://www.rainforest-alliance.org/wp-content/uploads/2021/07/guatemala-belize-border-deforestation.jpg.optimal.jpg");
+    width: 100vw;
+    height: 200vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nyelvtan #one {
+    height: 100vh;
+}
+
+#nyelvtan #one #title {
+    font-size: 20em;
+}
