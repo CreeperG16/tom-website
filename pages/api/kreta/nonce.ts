@@ -29,6 +29,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         fetch("https://idp.e-kreta.hu/nonce", {
             headers: {
                 "X-Forwarded-For": clientIp ?? "127.0.0.1",
+                "X-Real-IP": clientIp ?? "127.0.0.1",
+                Forwarded: `for=${clientIp}`,
             },
         }).then((x) => x.text()),
         new Promise<null>((r) => setTimeout(() => r(null), 5000)),
