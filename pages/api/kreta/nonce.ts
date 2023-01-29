@@ -1,10 +1,13 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import { getClientIp } from "request-ip";
 // import http from "http";
 // import request from "request";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     // console.log(req.headers.Origin);
-    console.log("a", req.socket.remoteAddress);
+    const clientIp = getClientIp(req);
+
+    console.log("a", req.socket.remoteAddress, req.headers, clientIp);
 
     // const data = await new Promise((r) =>
     //     request(
@@ -25,10 +28,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await Promise.race([
         fetch("https://idp.e-kreta.hu/nonce", {
             headers: {
-                "X-Forwarded-For": req.socket.remoteAddress ?? "127.0.0.1",
+                "X-Forwarded-For": clientIp ?? "127.0.0.1",
             },
         }).then((x) => x.text()),
-        new Promise((r) => setTimeout(() => r(null), 5000)),
+        new Promise<null>((r) => setTimeout(() => r(null), 5000)),
     ]);
 
     console.log(data, 1);
@@ -38,5 +41,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     //         x.text()
     //     )
     // );
-    return res.json({ data, ip: req.socket.remoteAddress });
+    return res.json({ data, ip: clientIp, headers: req.headers });
 }
