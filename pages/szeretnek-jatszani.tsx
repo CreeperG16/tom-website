@@ -1,6 +1,6 @@
 export default function SzeretnekJatszani() {
   //@ts-ignore
-  return (<div style="display: flex; align-items: center; justify-content: center;">
+  return (<div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
       <h1>Szeretnék Játszani!</h1>
       // quick and dirty spacing
       <br />
